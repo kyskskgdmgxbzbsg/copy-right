@@ -58,3 +58,32 @@ def is_abusive(word, chat_id):
         return False
     blacklist = get_blacklist_words(chat_id)
     return word in blacklist
+warns = db["warns"]
+
+def increase_warn(chat_id, user_id):
+    data = warns.find_one({"chat_id": chat_id, "user_id": user_id})
+    if not data:
+        warns.insert_one({"chat_id": chat_id, "user_id": user_id, "count": 1})
+        return 1
+    else:
+        new_count = data["count"] + 1
+        warns.update_one(
+            {"chat_id": chat_id, "user_id": user_id},
+            {"$set": {"count": new_count}}
+        )
+        return new_count
+
+def get_warn_count(chat_id, user_id):
+    data = warns.find_one({"chat_id": chat_id, "user_id": user_id})
+    return data["count"] if data else 0
+
+def reset_warn(chat_id, user_id):
+    warns.delete_one({"chat_id": chat_id, "user_id": user_id})
+
+def decrease_warn(chat_id, user_id):
+    data = warns.find_one({"chat_id": chat_id, "user_id": user_id})
+    if data and data["count"] > 0:
+        warns.update_one(
+            {"chat_id": chat_id, "user_id": user_id},
+            {"$inc": {"count": -1}}
+        )
