@@ -10,5 +10,5 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", "8020578503:AAFWeiecAUXOmzoOIzzTvnZ8BdcluskMS
 MONGO_URI = os.getenv("MONGO_DB_URI", "mongodb+srv://manoranjanhor43:somuxd@manoranjan.wsglmdq.mongodb.net/?retryWrites=true&w=majority&appName=Manoranjan")
 OWNER_ID = os.getenv("OWNER_ID", "6908972904")
 LOG_CHANNEL_ID = os.getenv("LOG_GROUP_ID", "-1002100433415")
-
+BOT_USERNAME = os.getenv("@silent_copyright_bot")
 # You can add more config variables here if needed
