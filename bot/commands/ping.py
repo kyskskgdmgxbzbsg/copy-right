@@ -2,7 +2,7 @@ import time
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from bot.keyboards.start_buttons import start_buttons
+from bot.keyboard.start_buttons import start_buttons
 from bot.utils.uptime import get_uptime
 
 START_TIME = time.time()
