@@ -15,7 +15,7 @@ from config import API_ID, API_HASH, BOT_TOKEN
 import logging
 
 # Client config
-app = Client("copy_right_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+app = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # IMPORT ALL HANDLERS
 # main.py
