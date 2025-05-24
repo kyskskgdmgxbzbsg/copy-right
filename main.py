@@ -1,3 +1,4 @@
+from bot.commands import stats
 from bot.commands import ping
 from pyrogram import Client
 import logging
