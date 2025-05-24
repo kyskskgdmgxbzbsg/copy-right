@@ -1,3 +1,4 @@
+from bot.commands import ping
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery
 
