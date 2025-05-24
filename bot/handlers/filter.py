@@ -26,3 +26,10 @@ async def filter_abuse(client, message):
                     f"Abusive word isn't allowed!\n{message.from_user.mention} warned ({warn_count}/3)"
                 )
             return
+from pyrogram import filters
+from bot import app  # app instance import করো
+
+@app.on_message(filters.text & filters.group)
+async def filter_words(client, message):
+    # তোমার filter logic এখানে
+    pass
