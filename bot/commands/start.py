@@ -20,3 +20,8 @@ async def start_command(client: Client, message: Message):
         await message.reply_photo(photo=photo_path, caption=caption, reply_markup=keyboard)
     else:
         await message.reply_text(caption, reply_markup=keyboard)
+from bot.keyboards.start_buttons import start_buttons
+
+...
+
+await message.reply_photo(photo=photo_path, caption=caption, reply_markup=start_buttons())
