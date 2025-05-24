@@ -1,7 +1,7 @@
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatPermissions
 from pyrogram import filters
-from bot.core import client  # import the app instance
+from bot.core.client import app  # import the app instance
 
 @app.on_message(filters.text & filters.group)
 async def filter_words(client, message):
