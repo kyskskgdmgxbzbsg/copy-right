@@ -10,8 +10,8 @@ from bot.commands import ban
 from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
-from bot.core import cilent
-from pyrogram import cilent
+from bot.core import client
+from pyrogram import client
 from config import API_ID, API_HASH, BOT_TOKEN
 import logging
 
