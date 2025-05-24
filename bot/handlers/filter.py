@@ -33,9 +33,8 @@ async def filter_abuse(client, message):
                 )
             return
 from pyrogram import filters
-from bot import app  # app instance import করো
+from bot import app
 
 @app.on_message(filters.text & filters.group)
 async def filter_words(client, message):
-    # তোমার filter logic এখানে
-    pass
+    await message.reply("Filtering message...")
