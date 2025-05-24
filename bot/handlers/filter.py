@@ -1,6 +1,12 @@
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatPermissions
+from pyrogram import filters
+from bot import app  # import the app instance
 
+@app.on_message(filters.text & filters.group)
+async def filter_words(client, message):
+    # Your filtering logic here
+    await message.reply("This is a filtered message.")
 @Client.on_message(filters.text & filters.group)
 async def filter_abuse(client, message):
     ...
