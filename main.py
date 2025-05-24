@@ -1,3 +1,4 @@
+from bot.commands import ban
 from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
