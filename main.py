@@ -11,6 +11,7 @@ from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
 from pyrogram import Client
+from config import MONGO_URI
 import logging
 
 # Client config
