@@ -1,3 +1,5 @@
+from bot.commands import wordlist
+from bot.handlers import filter
 from bot.commands import broadcast
 from bot.commands import warn
 from bot.handlers import logs
