@@ -1,4 +1,4 @@
-from config import API_ID, API_HASH, BOT_TOKEN, OWNER_ID, LOG_CHANNEL_ID, MONGO_URI
+from config import API_ID, API_HASH, BOT_TOKEN, OWNER_ID, LOG_CHANNEL_ID, MONGO_URI, BOT_USERNAME
 from bot.commands import unban
 from bot.commands import warn
 from bot.commands import wordlist
