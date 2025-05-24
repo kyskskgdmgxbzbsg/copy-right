@@ -1,1 +1,1 @@
-from main import app
+# You can leave this empty
