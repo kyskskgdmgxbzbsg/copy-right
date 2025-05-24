@@ -9,7 +9,7 @@ from bot.core.client import app
 @app.on_message(filters.text & filters.group)
 async def check_text(client, message: Message):
     await message.reply("Message received.")
-@client.on_message(filters.text & filters.group)
+@app.on_message(filters.text & filters.group)
 async def filter_abuse(client, message):
     ...
     for word in words:
