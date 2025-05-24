@@ -25,3 +25,9 @@ from bot.keyboards.start_buttons import start_buttons
 ...
 
 await message.reply_photo(photo=photo_path, caption=caption, reply_markup=start_buttons())
+from bot.utils.db import add_user
+
+@Client.on_message(filters.command("start") & filters.private)
+async def start(client, message):
+    add_user(message.from_user.id)
+    ...
