@@ -10,8 +10,8 @@ from bot.commands import ban
 from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
-from pyrogram import Client
-from config import MONGO_URI
+from pyrogram import Cilent
+from config import API_ID, API_HASH, BOT_TOKEN
 import logging
 
 # Client config
