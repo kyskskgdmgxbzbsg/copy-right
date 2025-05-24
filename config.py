@@ -1,7 +1,10 @@
 import os
+from dotenv import load_dotenv
 
-API_ID = int(os.getenv("API_ID", "123456"))
-API_HASH = os.getenv("API_HASH", "your_api_hash")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "your_bot_token")
-OWNER_ID = int(os.getenv("OWNER_ID", "123456789"))
-BOT_USERNAME = os.getenv("BOT_USERNAME", "YourBotUsername")
+load_dotenv()  # .env file load kore
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OWNER_ID = int(os.getenv("OWNER_ID"))
+BOT_USERNAME = os.getenv("BOT_USERNAME")
