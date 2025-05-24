@@ -19,3 +19,11 @@ def increase_warn(chat_id, user_id):
 
 def reset_warn(chat_id, user_id):
     warns.delete_one({"chat_id": chat_id, "user_id": user_id})
+users = db["users"]
+
+def add_user(user_id):
+    if not users.find_one({"user_id": user_id}):
+        users.insert_one({"user_id": user_id})
+
+def get_all_users():
+    return [u["user_id"] for u in users.find()]
