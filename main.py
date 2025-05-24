@@ -10,7 +10,6 @@ from bot.commands import ban
 from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
-from bot.keyboards.start_buttons import start_buttons
 from bot.core import client
 from pyrogram import client
 from config import API_ID, API_HASH, BOT_TOKEN
