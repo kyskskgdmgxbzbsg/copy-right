@@ -11,12 +11,12 @@ from bot.commands import mute
 from bot.commands import stats
 from bot.commands import ping
 from bot.core import client
-from pyrogram import client
+from pyrogram import Client
 from config import API_ID, API_HASH, BOT_TOKEN
 import logging
 
 # Client config
-app = client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+app = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # IMPORT ALL HANDLERS
 # main.py
