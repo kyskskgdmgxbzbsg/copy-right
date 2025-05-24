@@ -1,7 +1,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from bot.keyboards.start_buttons import start_buttons
+from bot.keyboard.start_buttons import start_buttons
 
 @Client.on_message(filters.command("stats") & filters.private)
 async def stats_command(client: Client, message: Message):
